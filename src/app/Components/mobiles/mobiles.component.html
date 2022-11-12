@@ -1,0 +1,17 @@
+<div class="style-div">
+    <mat-card *ngFor="let c of Data" class="mat-style-card">
+        <div class="mat-card-img">
+            <img [src]="c.image">
+        </div>
+        <div class="mat-card-sub-data">
+            <div class="main-card-name">
+                {{c.name}}
+            </div>
+            <div class="main-card-price">
+                {{c.price}}
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+<!-- <button (click)="getData()">Click Me</button> -->
