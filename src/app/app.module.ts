@@ -9,6 +9,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MobilesComponent } from './Components/mobiles/mobiles.component';
 import { ElectronicsComponent } from './Components/electronics/electronics.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
+import { StoreModule } from '@ngrx/store';
+import { rootReducer } from 'src/Reducers';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,9 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule,
+    StoreModule.forRoot(rootReducer, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,8 +20,8 @@ export class ElectronicsComponent implements OnInit {
 
     axios.get(`https://deependra-009.github.io/db.json`).then(
       (data)=>{
-        console.log(data.data.mobile);
-        this.Data=data.data.electronics;
+        console.log(data.data.ShoppingData.electronics);
+        this.Data=data.data.ShoppingData.electronics
         
       },
       (error)=>{
